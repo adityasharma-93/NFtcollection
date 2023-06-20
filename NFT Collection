@@ -1,0 +1,40 @@
+const nfts = [];
+
+const mint = function (_name, _eyeColor, _shirtType, _bling) {
+  const nft = {
+    name: _name,
+    eyeColor: _eyeColor,
+    shirtType: _shirtType,
+    bling: _bling,
+  };
+
+  nfts.push(nft);
+
+  console.log(`Your NFT has been minted : \n` , nft.name);
+};
+
+const printAllNft = function () {
+    
+  for (let i = 0; i < nfts.length; i++) {
+    console.log(`\nID : ${i + 1}`);
+    console.log(`Name : ${nfts[i].name}`);
+    console.log(`Eye Color : ${nfts[i].eyeColor}`);
+    console.log(`Shirt Color : ${nfts[i].shirtType}`);
+    console.log(`Bling : ${nfts[i].bling}`);
+  }
+
+  console.log(`\nFinished printing all the NFTs`);
+};
+
+const totalNft = function () {
+  console.log(`\nTotal number of NFTs : ${nfts.length}`);
+};
+
+mint("NFT 1", "Black", "Shirt", "Steel Chain");
+mint("NFT 2", "Green", "Hoodie", "Bronze Chain");
+mint("NFT 3", "Blue", "T-Shirt", "Silver Chain");
+mint("NFT 4", "Yellow", "Hoodie", "Gold Chain");
+mint("NFT 5", "Pink", "Hoodie", "Diamond Chain");
+
+printAllNft();
+totalNft();
